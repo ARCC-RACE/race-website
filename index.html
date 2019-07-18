@@ -1,17 +1,26 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
   <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="R.A.C.E." content="Racing Autonomous Cars Education">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
+
+  <!-- Imports -->
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/vendor/utilities.css">
+  <link rel="stylesheet" href="css/vendor/themify-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/vendor/animate.min.css">
+  <script src="https://kit.fontawesome.com/940ccaf4aa.js"></script>
+
+
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -22,11 +31,92 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!-- Loading Animation -->
+  <div id="preloader" class="preloader">
+    <div class="loader-status">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <!-- Background -->
+  <div class="global-overlay">
+    <div class="overlay-inner bg-image-holder bg-cover">
+      <img src="demo/images/image-4.jpg" alt="background">
+    </div>
+    <a class="player"></a>
+    <div id="youtube-background" class="overlay-inner overlay-video"></div>
+    <div class="overlay-inner bg-dark opacity-55"></div>
+  </div>
+
+  <!-- Navigation for Mobile -->
+
+  <header class="site-header header-content-light header-content-mobile-light">
+    <div class="header-brand">
+      <!-- Logo -->
+      <a class="logo" href="#">
+        <h1>R.A.C.E.</h1>
+      </a>
+      <button type="button" id="navigation-toggle" class="nav-toggle">
+        <span></span>
+      </button>
+    </div>
+    <div class="header-collapse">
+      <div class="header-collapse-inner">
+        <nav class="site-nav">
+          <ul id="navigation">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#subscribe">Subscribe</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <footer class="site-footer footer-content-light footer-mobile-content-light">
+    <div class="overlay">
+      <div class="overlay-inner"></div>
+    </div>
+    <div class="container socials-container">
+      <nav class="socials-icons">
+        <ul class="mx-auto">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container copyright-container">
+      <p>© 2019 ARCC - All Rights Reserved</p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="js/vendor/jquery.easing.min.js"></script>
+  <script src="js/vendor/jquery.validate.min.js"></script>
+  <script src="js/vendor/jquery.mb.YTPlayer.min.js"></script>
+
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
