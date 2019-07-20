@@ -47,7 +47,7 @@
     // Youtube Video
     if ($('#youtube-background').length > 0) {
       var videos = [
-        {videoURL: "iXkJmJa4NvE", showControls:false, containment:'.overlay-video',autoPlay:true, mute:true, startAt:0,opacity:1, loop:true, showYTLogo:false, realfullscreen: true, addRaster:true}
+        {videoURL: "https://youtu.be/_JjSQDFJ3QA", showControls:false, containment:'.overlay-video',autoPlay:true, mute:true, startAt:0 ,opacity:1, loop:true, showYTLogo:false, realfullscreen: true, addRaster:true}
       ];
 
       $('.player').YTPlaylist(videos, true);
