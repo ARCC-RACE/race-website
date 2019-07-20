@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Berlin Rounded';
+    src: url('BerlinRounded-Regular.eot');
+    src: url('BerlinRounded-Regular.eot?#iefix') format('embedded-opentype'),
+        url('BerlinRounded-Regular.woff2') format('woff2'),
+        url('BerlinRounded-Regular.woff') format('woff'),
+        url('BerlinRounded-Regular.ttf') format('truetype'),
+        url('BerlinRounded-Regular.svg#BerlinRounded-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berlin Rounded';
+    src: url('BerlinRounded-ExtraBold.eot');
+    src: url('BerlinRounded-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('BerlinRounded-ExtraBold.woff2') format('woff2'),
+        url('BerlinRounded-ExtraBold.woff') format('woff'),
+        url('BerlinRounded-ExtraBold.ttf') format('truetype'),
+        url('BerlinRounded-ExtraBold.svg#BerlinRounded-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berlin Rounded';
+    src: url('BerlinRounded-Bold.eot');
+    src: url('BerlinRounded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BerlinRounded-Bold.woff2') format('woff2'),
+        url('BerlinRounded-Bold.woff') format('woff'),
+        url('BerlinRounded-Bold.ttf') format('truetype'),
+        url('BerlinRounded-Bold.svg#BerlinRounded-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berlin Rounded';
+    src: url('BerlinRounded-Light.eot');
+    src: url('BerlinRounded-Light.eot?#iefix') format('embedded-opentype'),
+        url('BerlinRounded-Light.woff2') format('woff2'),
+        url('BerlinRounded-Light.woff') format('woff'),
+        url('BerlinRounded-Light.ttf') format('truetype'),
+        url('BerlinRounded-Light.svg#BerlinRounded-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

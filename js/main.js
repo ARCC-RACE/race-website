@@ -8,7 +8,7 @@
     preloaderDelay = 1200,
     preloaderFadeOutTime = 500,
     $siteHeader = $('.site-header'),
-    $navToggle = $('.navigation-toggle'),
+    $navToggle = $('#navigation-toggle'),
     firstPart = 'home';
 
   function getWindowWidth() {
@@ -27,19 +27,6 @@
     $preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
   }
 
-  function backgrounds() {
-
-    // Youtube Video
-    if ($('#youtube-background').length > 0) {
-      var videos = [
-        {videoURL: "iXkJmJa4NvE", showControls:false, containment:'.overlay-video',autoPlay:true, mute:true, startAt:0,opacity:1, loop:true, showYTLogo:false, realfullscreen: true, addRaster:true}
-      ];
-
-      $('.player').YTPlaylist(videos, true);
-    }
-
-  }
-
   function pageLayout() {
     var siteParts = $('.site-part').length,
       sitePartsWidth = siteParts * getDocumentWidth();
@@ -53,7 +40,20 @@
     }
   }
 
-  // [Navigation]
+  function backgrounds() {
+
+    // Youtube Video
+    if ($('#youtube-background').length > 0) {
+      var videos = [
+        {videoURL: "iXkJmJa4NvE", showControls:false, containment:'.overlay-video',autoPlay:true, mute:true, startAt:0,opacity:1, loop:true, showYTLogo:false, realfullscreen: true, addRaster:true}
+      ];
+
+      $('.player').YTPlaylist(videos, true);
+    }
+
+  }
+
+  // [3. Navigation]
   function showSitePart(target) {
     if( $( target ).length > 0 ) {
       if ( $( target ).hasClass('active') ){
@@ -119,16 +119,20 @@
 
   function navigation() {
 
-		$navToggle.on('click', function(e) {
-			e.preventDefault();
-			if(!$(this).hasClass('open')){
-				$(this).addClass('open');
-				$('.header-collapse').slideDown(500);
-			} else {
-				$('.header-collapse').slideUp(500);
-				$(this).removeClass('open');
-			}
-		});
+    $navToggle.on('click', function(e) {
+      e.preventDefault();
+      if(!$(this).hasClass('open')){
+        $(this).addClass('open');
+        $('.header-collapse').slideDown(500);
+      } else {
+        $('.header-collapse').slideUp(500);
+        $(this).removeClass('open');
+      }
+    });
+
+    $('#navigation').on('click', (e) => {
+      $('#navigation-toggle').click();
+    });
 
     $('body').on( 'click', '#navigation a, a.scrollto', function(e) {
       if (this.hash !== '') {
@@ -169,20 +173,18 @@
 
   $(window).on('load', () => {
     preloader();
+    pageLayout();
   });
 
   $(document).ready(($) => {
-    pageLayout();
-    navigation();
-    navigation();
     backgrounds();
     navigation();
     showFirstPart();
+    $('#navigation-toggle').click();
   });
 
   // window.resize function
   $(window).on('resize', function() {
-    pageLayout();
     showSitePartResponsive();
   });
 
