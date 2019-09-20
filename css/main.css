@@ -1112,6 +1112,11 @@ img.logo-dark {
   font-family: "Berlin Rounded", sans-serif;
 }
 
+@media (min-width: 700px) {
+  .timeline {
+    left: 30%;
+  }
+}
 .timeline:before{
   position:absolute;
   content:'';
