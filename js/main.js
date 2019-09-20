@@ -3,14 +3,18 @@
   "use strict";
 
   // Vars
+
   var $body = $('body'),
     $preloader = $('#preloader'),
     preloaderDelay = 1200,
     preloaderFadeOutTime = 500,
     $siteHeader = $('.site-header'),
     $navToggle = $('#navigation-toggle'),
-    firstPart = 'home';
+    firstPart = window.location.hash.substr(1)
 
+  if (!window.location.hash.substr(1) || !firstPart) {firstPart = 'home' }
+
+  console.log(window.location.hash.substr(1));
   function getWindowWidth() {
     return Math.max($(window).width(), window.innerWidth);
   }
@@ -203,7 +207,6 @@
 
   $(window).on('load', () => {
     preloader();
-    console.log('Page Layout')
     pageLayout();
   });
 
